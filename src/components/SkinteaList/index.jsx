@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const SkinteaList = (props) => {
     console.log(props)
   return (
     <main>
-        {props.skintea.map(tea =>{
+        {props?.skintea.map(tea =>{
             return(
                 <Link key={tea.id} to={`/skintea/${tea._id}`} >
                 <article >
