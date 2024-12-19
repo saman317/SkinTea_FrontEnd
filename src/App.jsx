@@ -24,8 +24,8 @@ const App = () => {
 
   useEffect(() => {
     const fetchAllSkintea = async () => {
-      const {skintea}= await skinteaService.getSkintea()
-      setSkintea(skintea);
+      const {skinT}= await skinteaService.getSkintea()
+      setSkintea(skinT);
 
     };
     if(user) fetchAllSkintea()
