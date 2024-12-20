@@ -17,4 +17,21 @@ const getSkintea= async ()=>{
     }
 }
 
-export{ getSkintea };
+
+const showSkintea= async (skinteaId)=>{
+    try {
+        const res = await fetch(`${BACKEND_URL}/skintea/${skinteaId}`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+
+        });
+    const skintea = await res.json();
+    console.log(skintea);
+    return skintea;
+
+    }catch(err){
+        console.log(err, "Malfunction")
+    }
+}
+export{ getSkintea, showSkintea };

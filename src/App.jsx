@@ -8,6 +8,7 @@ import SigninForm from './components/SigninForm/SigninForm';
 import * as skinteaService from "../src/services/skinteaService";
 import * as authService from '../src/services/authService'; // import the authservice
 import SkinteaList from './components/SkinteaList';//index.jsx name automatically gets imported so don't need to list
+import SkinteaDetails from './components/SkinteaDetails';
 
 
 
@@ -40,7 +41,9 @@ const App = () => {
           ) : (
             <Route path="/" element={<Landing />} />
           )}
+          
           <Route path="/skintea" element= {<SkinteaList skintea={skintea}/>} />
+          <Route path="/skintea/:id" element= {<SkinteaDetails/>}/>
           <Route path="/signup" element={<SignupForm setUser={setUser} />} />
           <Route path="/signin" element={<SigninForm setUser={setUser} />} />
         </Routes>
