@@ -1,0 +1,218 @@
+/* SkinteaDetails.css */
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content from the top */
+    align-items: center; /* Center horizontally */
+    background-color: #f9f9f9; /* Light gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean font family */
+  }
+  
+  /* Main Container */
+  main {
+    background-color: #fafafa; /* Light gray background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 900px;
+    width: 100%; /* Full width up to max-width */
+    box-sizing: border-box;
+    margin-top: 60px; /* Space from top of page */
+  }
+  
+  /* Header Styling */
+  header {
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    color: #f28ab2; /* Soft blush pink */
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #4f8d7f; /* Deeper mint green */
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #7a7a7a; /* Soft gray for paragraphs */
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #f5a623; /* Peach button */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #d47f00; /* Darker peach when hovered */
+  }
+  
+  button:disabled {
+    background-color: #e0e0e0; /* Disabled state */
+    cursor: not-allowed;
+  }
+  
+  /* Section for Reviews */
+  section {
+    background-color: #a7e8d3; /* Soft mint green */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    color: #4f8d7f; /* Deeper mint green */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Align items horizontally */
+  }
+  
+  section h2 button {
+    background-color: #f5a623;
+    color: white;
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  section h2 button:hover {
+    background-color: #d47f00;
+  }
+  
+  section p {
+    font-size: 1.1rem;
+    color: #6d6d6d; /* Darker gray text */
+  }
+  
+  /* Review Articles */
+  article {
+    background-color: #ffffff; /* White background for each review */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  article header {
+    font-size: 1.1rem;
+    color: #333333; /* Dark text for the review author's name and date */
+    margin-bottom: 10px;
+  }
+  
+  article p {
+    font-size: 1.2rem;
+    color: #4f4f4f; /* Slightly darker gray for review text */
+    line-height: 1.5;
+  }
+  
+  /* Comments Section */
+  .comment-form {
+    background-color: #f5f5f5; /* Light background for the comment form */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comment-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .comment-form button {
+    background-color: #f5a623;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .comment-form button:hover {
+    background-color: #d47f00; /* Darker peach when hovered */
+  }
+  
+  /* Loader Message Styling */
+  h1 {
+    font-size: 2rem;
+    color: #e74c3c; /* Red for loading message */
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 20px;
+      width: 100%;
+      margin-top: 40px; /* Less space at the top for mobile */
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    section {
+      padding: 15px;
+      margin-top: 20px;
+    }
+  
+    article {
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%; /* Full width button on smaller screens */
+      margin-top: 10px; /* Less space between buttons */
+    }
+  
+    /* Adjust button position for mobile */
+    section h2 {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    section h2 button {
+      margin-left: 0; /* Remove left margin */
+      margin-top: 10px; /* Add top margin for better spacing */
+    }
+  }
+  

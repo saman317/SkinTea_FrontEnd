@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './SkinteaList.css';
+
 
 const SkinteaList = (props) => {
     console.log(props)

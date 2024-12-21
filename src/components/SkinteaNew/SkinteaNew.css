@@ -1,0 +1,102 @@
+/* SkinteaForm.css */
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Main Container */
+  main {
+    background-color: #fafafa; /* Light gray background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Form Styling */
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between form elements */
+  }
+  
+  label {
+    font-size: 1.1rem;
+    color: #4f8d7f; /* Deeper mint green */
+    margin-bottom: 8px;
+  }
+  
+  input,
+  select {
+    padding: 12px;
+    font-size: 1rem;
+    color:cornflowerblue;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 6px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #f5a623; /* Peach border on focus */
+    outline: none;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #f5a623; /* Peach button */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #d47f00; /* Darker peach when hovered */
+  }
+  
+  button:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 20px;
+      width: 100%;
+      margin-top: 40px;
+    }
+  
+    form {
+      gap: 15px; /* Reduce spacing between elements on smaller screens */
+    }
+  
+    button {
+      width: 100%; /* Full width button on smaller screens */
+      margin-top: 10px; /* Less space between buttons */
+    }
+  }
+  

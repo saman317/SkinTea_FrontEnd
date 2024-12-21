@@ -1,6 +1,9 @@
 import { useState } from "react";
 import * as skinteaService from "../../services/skinteaService";
 import { useNavigate } from "react-router-dom";
+import './SkinteaNew.css';
+
+
 
 const SkinteaForm = (props) => {
     const navigate = useNavigate();

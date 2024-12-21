@@ -1,0 +1,138 @@
+/* SigninForm.css */
+
+/* Ensure the body takes up the full height of the viewport */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Keep navbar at the top */
+    align-items: center; /* Center horizontally */
+    background-color: #f9f9f9; /* Light background color for the entire page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+  }
+  
+  /* General Styling for the Signin Form */
+  main {
+    background-color: #fafafa; /* Light gray with a hint of warmth */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 600px;
+    width: 100%; /* Allow the container to take full width up to max-width */
+    text-align: center; /* Center the text */
+    box-sizing: border-box; /* Include padding in width */
+    margin-top: 60px; /* Add top margin for spacing from navbar */
+  }
+  
+  /* Heading Styles */
+  h1 {
+    font-size: 2.8rem; /* Larger title font */
+    color: #f28ab2; /* Soft blush pink color */
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  /* Form description text */
+  p {
+    color: #d47f00; /* Peach color for error message or other notices */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Field Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  form div {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the form fields */
+    text-align: left;
+  }
+  
+  form label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333; /* Dark text for labels */
+    margin-bottom: 8px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for inputs */
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    border-color: #a8d5ba; /* Mint green border on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #f5a623; /* Peach button */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for buttons */
+    max-width: 200px; /* Limit button width */
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #d47f00; /* Darker peach when hovered */
+  }
+  
+  /* Cancel Button Styling */
+  button.cancel {
+    background-color: #f5d0a9; /* Lighter peach for cancel button */
+    margin-top: 10px; /* Space between the submit and cancel buttons */
+  }
+  
+  button.cancel:hover {
+    background-color: #e2a87f; /* Slightly darker peach */
+  }
+  
+  /* Error Message Styling */
+  p.error {
+    color: #e74c3c; /* Red for error messages */
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    main {
+      padding: 20px;
+      width: 100%;
+      margin-top: 40px; /* Less space at the top on mobile */
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    form {
+      gap: 15px;
+    }
+  
+    button {
+      max-width: 100%; /* Make buttons full width on small screens */
+    }
+  }
+  
