@@ -1,0 +1,142 @@
+/* SignupForm.css */
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content from the top */
+    align-items: center; /* Center horizontally */
+    background-color: #f9f9f9; /* Light gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean font family */
+  }
+  
+  /* Main Form Styling */
+  main {
+    background-color: #fafafa; /* Light gray with a hint of warmth */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 600px;
+    width: 100%; /* Full width up to max-width */
+    text-align: center; /* Center content */
+    box-sizing: border-box;
+    margin-top: 60px; /* Add spacing between navbar (if any) and form */
+  }
+  
+  /* Header Styling */
+  h1 {
+    font-size: 2.8rem; /* Larger title font */
+    color: #f28ab2; /* Soft blush pink for the title */
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  /* Error Message Styling */
+  p {
+    color: #e74c3c; /* Red for error messages */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Field Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center form fields */
+  }
+  
+  form div {
+    width: 100%;
+    max-width: 400px; /* Set max width for input fields */
+    text-align: left; /* Left align labels and inputs */
+  }
+  
+  form label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333; /* Dark text for labels */
+    margin-bottom: 8px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for inputs */
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    border-color: #a8d5ba; /* Mint green border on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #f5a623; /* Peach button */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for buttons */
+    max-width: 200px; /* Limit button width */
+  }
+  
+  button:hover {
+    background-color: #d47f00; /* Darker peach when hovered */
+  }
+  
+  button:disabled {
+    background-color: #e0e0e0; /* Light gray when disabled */
+    cursor: not-allowed;
+  }
+  
+  /* Cancel Button Styling */
+  button.cancel {
+    background-color: #f5d0a9; /* Lighter peach for cancel button */
+    margin-top: 20px; /* Space between the sign-up and cancel buttons */
+  }
+  
+  button.cancel:hover {
+    background-color: #e2a87f; /* Slightly darker peach */
+  }
+  
+  /* Spacing Between Fields */
+  form div.username,
+  form div.password,
+  form div.passwordConf {
+    margin-bottom: 20px; /* Space between each form field */
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    main {
+      padding: 20px;
+      width: 100%;
+      margin-top: 40px; /* Less space at the top on mobile */
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    form {
+      gap: 15px; /* Less space between fields on small screens */
+    }
+  
+    button {
+      max-width: 100%; /* Full width buttons on mobile */
+    }
+  }
+  

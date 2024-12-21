@@ -1,0 +1,98 @@
+/* NavBar.css */
+
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
+    background-color: #f9f9f9; /* Light background for the whole page */
+    color: #333; /* Default text color */
+  }
+  
+  /* General Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar content horizontally */
+    align-items: center; /* Align items vertically in the center */
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #a8d5ba 25%, #ffffff 25%, #ffffff 50%, #a8d5ba 50%, #a8d5ba 75%, #ffffff 75%, #ffffff 100%); /* Mint green and white stripes */
+    background-size: 60px 60px; /* Stripe width and height */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: sticky; /* Sticky navbar at the top */
+    top: 0;
+    width: 100%; /* Ensure it spans the entire width of the page */
+    z-index: 1000; /* Ensure it stays on top */
+    font-weight: bold;  
+  }
+  
+  /* Navbar Links Container */
+  .navbar-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center;
+    list-style: none;
+    margin-left: 40px; /* Space between logo and links (if logo is added) */ 
+  }
+  
+  /* Navbar Items Styling */
+  .navbar-links li {
+    margin: 0 20px; /* Space between each link */
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #333; /* Dark text color for better contrast */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 5px; /* Rounded corners */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    font-weight: bold;  
+  }
+  
+  /* Hover Effects */
+  .navbar-links a:hover {
+    background-color: #f5a623; /* Warm peach background on hover */
+    color: white; /* White text on hover */
+  }
+  
+  /* Active Link */
+  .navbar-links a.active {
+    color: #f5a623; /* Active link color */
+  }
+  
+  /* Welcome Text Styling */
+  .navbar-welcome {
+    font-size: 1.2rem;
+    color: #f28ab2; /* Soft blush pink */
+    font-weight: 600;
+    margin-right: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack the navbar items vertically */
+      padding: 20px;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .navbar-links li {
+      margin: 10px 0; /* Increased spacing for mobile */
+    }
+  
+    .navbar-welcome {
+      margin-bottom: 15px;
+    }
+  }
+  
+  

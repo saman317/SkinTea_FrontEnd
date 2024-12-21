@@ -1,0 +1,121 @@
+/* SkinteaList.css */
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Main Container */
+  main {
+    background-color: #fafafa; /* Light gray background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Article (List Item) Styling */
+  article {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Full width inside the container */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  article:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+  }
+  
+  /* Article Header */
+  article header {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  article header h2 {
+    font-size: 2rem;
+    color: #f28ab2; /* Soft blush pink */
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  article p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    line-height: 1.5;
+  }
+  
+  /* Link Styling */
+  a {
+    text-decoration: none; /* Remove underline */
+    width: 100%;
+  }
+  
+  /* Article Content */
+  article p:nth-of-type(2) {
+    font-size: 1.1rem;
+    color: #4f8d7f; /* Soft mint green */
+    margin-top: 10px;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #f5a623;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #d47f00; /* Darker peach when hovered */
+  }
+  
+  button:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 20px;
+      width: 100%;
+      margin-top: 40px;
+    }
+  
+    article {
+      padding: 15px;
+    }
+  
+    article h2 {
+      font-size: 1.8rem;
+    }
+  
+    article p {
+      font-size: 1rem;
+    }
+  }
+  

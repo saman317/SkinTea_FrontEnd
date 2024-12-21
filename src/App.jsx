@@ -58,7 +58,6 @@ const App = () => {
           <Route path="/skintea/:id" element={ <SkinteaDetails handleDeleteSkintea={handleDeleteSkintea}/> }/>
           <Route path="/skintea" element= {<SkinteaList skintea={skintea}/>} />
           <Route path="/skintea/new" element= {<SkinteaNew addNewSkintea={addNewSkintea}/>}/>
-          <Route path="/skintea/:id" element= {<SkinteaDetails/>}/>
           <Route path="/signup" element={<SignupForm setUser={setUser} />} />
           <Route path="/signin" element={<SigninForm setUser={setUser} />} />
         </Routes>
