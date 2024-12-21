@@ -28,19 +28,20 @@ const handleChange = (evt) => {
         if (newSkintea) {
 // addad a console log here to se if here are getting back the tea
 
-useEffect(()=>{
-  const fetchSkintea = async () =>{
-    const updatedTea = await skinteaService.showSkintea(id);
-    setFormData(updatedTea);
-  };
-  if (id) fetchSkintea();
-}, [id])
 
 console.log(newSkintea, "New tea here----------->")
           props.addNewSkintea(newSkintea);
           navigate("/skintea");
         }
       }};
+      useEffect(()=>{
+        const fetchSkintea = async () =>{
+          const updatedTea = await skinteaService.showSkintea(id);
+          setFormData(updatedTea);
+        };
+        if (id) fetchSkintea();
+      }, [id]);
+      
       return (
         <main>
           <form onSubmit={handleSubmit}>

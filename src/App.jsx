@@ -47,7 +47,7 @@ const App = () => {
 
   const handleUpdateSkintea = async (id,skinteaFormData ) =>{
     const updatedTea= await skinteaService.update(id,skinteaFormData);
-    setSkintea(skintea.map((tea)=> (id === tea._id ? updatedTea : tea)));
+    setSkintea(skintea.map((tea)=> (id === tea._id ?  id :updatedTea )));
     navigate(`/skintea/${id}`)
   }
   return (
