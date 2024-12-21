@@ -77,7 +77,7 @@ const createComment = async (formData, postId) => {
 
 const deletedSkintea = async (id) => {
     try {
-      const res = await fetch(`${BASE_URL}/${id}`, {
+      const res = await fetch(`${BACKEND_URL}/skintea/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -92,7 +92,7 @@ const deletedSkintea = async (id) => {
 
 const updateSkintea= async(id, skinteaFormData)=>{
     try{
-        const res = await fetch(`${BASE_URL}/${id}`, {
+        const res = await fetch(`${BACKEND_URL}/skintea/${id}`, {
             method: 'PUT',
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -100,7 +100,7 @@ const updateSkintea= async(id, skinteaFormData)=>{
             },
             body: JSON.stringify(skinteaFormData),
           });
-          return res.json();
+          return await res.json();
 
     }catch(error){
         console.log(error)

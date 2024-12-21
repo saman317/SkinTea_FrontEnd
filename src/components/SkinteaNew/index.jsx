@@ -37,7 +37,7 @@ console.log(newSkintea, "New tea here----------->")
       useEffect(()=>{
         const fetchSkintea = async () =>{
           const updatedTea = await skinteaService.showSkintea(id);
-          setFormData(updatedTea);
+          setFormData(updatedTea?.foundTea);
         };
         if (id) fetchSkintea();
       }, [id]);
