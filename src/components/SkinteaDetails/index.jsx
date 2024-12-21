@@ -12,8 +12,8 @@ const SkinteaDetails  = (props) => {
 
     useEffect(()=>{
         const fetchSkintea = async () =>{
-            const {foundTea} = await skinteaService.showSkintea(id);
-            setSkintea(foundTea)
+            const skintea = await skinteaService.showSkintea(id);
+            setSkintea(skintea)
 
         }
         fetchSkintea()
