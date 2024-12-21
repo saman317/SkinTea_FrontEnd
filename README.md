@@ -1,8 +1,40 @@
-# React + Vite
+# SkinTea
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+**SkinTea** is a platform for skincare, makeup, and hair product enthusiasts to share their experiences. With the growing interest in skincare, this application provides a space to post real reviews, tips, and product recommendations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+
+To get started with the project, please follow the links below:
+
+- **Trello Board**: [Trello Link](https://trello.com/b/IWoschS3/makeup-skincare)
+- **Backend Repository**: [SkinTea Backend](https://github.com/saman317/SkinTea_Project3)
+- **Deployed Link**: 
+
+## Key Attributes
+
+- MDN
+- SheCodes
+- W3Schools
+- Stack Overflow
+- Class and Lecture Notes
+
+## Technologies Used
+
+- React and Vite
+- CSS
+- JavaScript
+- MongoDB
+- ChatGPT
+
+## Future Iterations
+
+In future iterations, we plan to introduce the following features:
+
+- Allow users to edit and delete their comments.
+- Introduce a feature that allows users to favorite the products they like.
+- Add the ability to upload pictures to product profiles.
+
+
+
+Thank you for checking out **SkinTea**!
