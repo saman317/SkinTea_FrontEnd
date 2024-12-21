@@ -10,7 +10,7 @@ To get started with the project, please follow the links below:
 
 - **Trello Board**: [Trello Link](https://trello.com/b/IWoschS3/makeup-skincare)
 - **Backend Repository**: [SkinTea Backend](https://github.com/saman317/SkinTea_Project3)
-- **Deployed Link**: 
+- **Deployed Link (front End)**: https://skintea.netlify.app/
 
 ## Key Attributes
 
