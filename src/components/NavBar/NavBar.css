@@ -19,8 +19,9 @@
     justify-content: center; /* Center the navbar content horizontally */
     align-items: center; /* Align items vertically in the center */
     padding: 20px 40px;
-    background: linear-gradient(135deg, #a8d5ba 25%, #ffffff 25%, #ffffff 50%, #a8d5ba 50%, #a8d5ba 75%, #ffffff 75%, #ffffff 100%); /* Mint green and white stripes */
-    background-size: 60px 60px; /* Stripe width and height */
+    background-image: url('https://st2.depositphotos.com/6530696/46583/i/950/depositphotos_465839414-stock-photo-cosmetic-background-skin-care-products.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     position: sticky; /* Sticky navbar at the top */
     top: 0;
