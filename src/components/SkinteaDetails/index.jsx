@@ -13,7 +13,7 @@ const SkinteaDetails  = (props) => {
     useEffect(()=>{
         const fetchSkintea = async () =>{
             const skintea = await skinteaService.showSkintea(id);
-            setSkintea(skintea)
+            setSkintea(skintea?.foundTea)//just give me the foundTea from that object
 
         }
         fetchSkintea()
@@ -26,7 +26,7 @@ const SkinteaDetails  = (props) => {
     <main>
         <header>
         <h1>{skintea.productName}</h1>
-        <h2>{skintea.productType.toUpperCase()}</h2>
+        <h2>{skintea.productType?.toUpperCase()}</h2>
         <p>{skintea.recommendation}</p>
         <p>{skintea.pricePoint}</p>
          <p>{skintea.author.username} posted on { new Date(skintea.createdAt).toLocaleDateString()}</p>

@@ -46,9 +46,12 @@ const App = () => {
 
 
   const handleUpdateSkintea = async (id,skinteaFormData ) =>{
-    const updatedTea= await skinteaService.update(id,skinteaFormData);
-    setSkintea(skintea.map((tea)=> (id === tea._id ?  id :updatedTea )));
+    const {updatedTea}= await skinteaService.updateSkintea(id,skinteaFormData);
+    console.log(skintea)
+    console.log(updatedTea)
+    setSkintea(skintea.map((tea)=> (id === updatedTea._id ?  tea :updatedTea )));
     navigate(`/skintea/${id}`)
+
   }
   return (
     <>
@@ -64,7 +67,7 @@ const App = () => {
           <Route path="/skintea/:id" element={ <SkinteaDetails handleDeleteSkintea={handleDeleteSkintea}/> }/>
           <Route path="/skintea" element= {<SkinteaList skintea={skintea}/>} />
           <Route path="/skintea/new" element= {<SkinteaNew addNewSkintea={addNewSkintea}/>}/>
-          <Route path="/skintea/:id/edit" element= {<SkinteaNew handleUpdateSkintea/>}/>
+          <Route path="/skintea/:id/edit" element= {<SkinteaNew handleUpdateSkintea={handleUpdateSkintea}/>}/>
           <Route path="/signup" element={<SignupForm setUser={setUser} />} />
           <Route path="/signin" element={<SigninForm setUser={setUser} />} />
         </Routes>
