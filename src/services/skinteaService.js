@@ -56,4 +56,38 @@ const create = async(formData)=>{
 
     }
 }
-export{ getSkintea, showSkintea, create };
+
+
+const createComment = async (formData, postId) => {
+    try {
+      const res = await fetch(`${BACKEND_URL}/skintea/${postId}/comments`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const { newComment } = await res.json();
+      return newComment;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+const deletedSkintea = async (id) => {
+    try {
+      const res = await fetch(`${BASE_URL}/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      return res.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+//     
+export{ getSkintea,showSkintea,create, createComment, deletedSkintea};

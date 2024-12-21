@@ -1,10 +1,14 @@
-import React, {useEffect, useState} from 'react'
+import { AuthedUserContext } from '../../App'
+import React, {useContext, useEffect, useState, usedContext} from 'react'
 import {useParams} from "react-router-dom"
 import * as skinteaService from "../../services/skinteaService"
+import CommentForm from '../CommentForm'
 
-const SkinteaDetails  = () => {
+const SkinteaDetails  = (props) => {
     const {id} = useParams()
-    const [skintea, setSkintea]= useState(null)
+    const [skintea, setSkintea]= useState(null);
+    const user = useContext(AuthedUserContext);
+
     useEffect(()=>{
         const fetchSkintea = async () =>{
             const {foundTea} = await skinteaService.showSkintea(id);
@@ -20,15 +24,26 @@ const SkinteaDetails  = () => {
     return (
     <main>
         <header>
-            <p>{skintea.productType.toUpperCase()}</p>
-            <h1>{skintea.productName}</h1>
+        <h1>{skintea.productName}</h1>
+        <h2>{skintea.productType.toUpperCase()}</h2>
+        <p>{skintea.recommendation}</p>
+        <p>{skintea.pricePoint}</p>
+
+        
+          
+
             <p>{skintea.author.username} posted on { new Date(skintea.createdAt).toLocaleDateString()}</p>
+            {skintea.author._id === user._id && (
+                <>
+                <button onClick={()=> props.handleDeleteSkintea(id)}>DELETE</button>
+                </>
+            )}
         </header>
         <section>
     <h2>Reviews</h2>
+    <CommentForm skinteaId={id} />
     {!skintea.comments.length && <p>There are no reviews!</p>}
     {skintea.comments.map((comment) => {
-        console.log(comment);
         return (
             <article key={comment._id}>
                 <header>
@@ -43,7 +58,7 @@ const SkinteaDetails  = () => {
     })}
 </section>
     </main>
-  )
-}
+  );
+};
 
 export default SkinteaDetails
