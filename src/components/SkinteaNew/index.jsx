@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as skinteaService from "../../services/skinteaService";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import './SkinteaNew.css';
 
 
 
 const SkinteaForm = (props) => {
+  const {id}= useParams();
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         productName: "",
@@ -20,20 +21,31 @@ const handleChange = (evt) => {
     
       const handleSubmit = async (evt) => {
         evt.preventDefault();
-        console.log("formData", formData);
-        // We'll update this function shortly...
+        if(id){
+          props.handleUpdateSkintea(id, formData)
+        }else{
         const newSkintea = await skinteaService.create(formData);
         if (newSkintea) {
 // addad a console log here to se if here are getting back the tea
+
 
 console.log(newSkintea, "New tea here----------->")
           props.addNewSkintea(newSkintea);
           navigate("/skintea");
         }
-      };
+      }};
+      useEffect(()=>{
+        const fetchSkintea = async () =>{
+          const updatedTea = await skinteaService.showSkintea(id);
+          setFormData(updatedTea);
+        };
+        if (id) fetchSkintea();
+      }, [id]);
+      
       return (
         <main>
           <form onSubmit={handleSubmit}>
+            <h1>{id ? "Edit Tea" : "New Tea"}</h1>
             <label htmlFor="productName">Spill.The.Tea</label>
             <input
               required

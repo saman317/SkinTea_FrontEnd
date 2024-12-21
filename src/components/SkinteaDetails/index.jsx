@@ -3,16 +3,17 @@ import React, {useContext, useEffect, useState, usedContext} from 'react'
 import {useParams} from "react-router-dom"
 import * as skinteaService from "../../services/skinteaService"
 import CommentForm from '../CommentForm'
+import {Link} from "react-router-dom"
 
 const SkinteaDetails  = (props) => {
-    const {id} = useParams()
+    const {id} = useParams();
     const [skintea, setSkintea]= useState(null);
     const user = useContext(AuthedUserContext);
 
     useEffect(()=>{
         const fetchSkintea = async () =>{
-            const {foundTea} = await skinteaService.showSkintea(id);
-            setSkintea(foundTea)
+            const skintea = await skinteaService.showSkintea(id);
+            setSkintea(skintea)
 
         }
         fetchSkintea()
@@ -28,11 +29,11 @@ const SkinteaDetails  = (props) => {
         <h2>{skintea.productType.toUpperCase()}</h2>
         <p>{skintea.recommendation}</p>
         <p>{skintea.pricePoint}</p>
-
-
-            <p>{skintea.author.username} posted on { new Date(skintea.createdAt).toLocaleDateString()}</p>
+         <p>{skintea.author.username} posted on { new Date(skintea.createdAt).toLocaleDateString()}</p>
             {skintea.author._id === user._id && (
+                
                 <>
+                <Link to={`/skintea/${id}/edit`}>EDIT</Link>
                 <button onClick={()=> props.handleDeleteSkintea(id)}>DELETE</button>
                 </>
             )}
