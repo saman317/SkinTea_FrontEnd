@@ -34,6 +34,7 @@ In future iterations, we plan to introduce the following features:
 - Allow users to edit and delete their comments.
 - Introduce a feature that allows users to favorite the products they like.
 - Add the ability to upload pictures to product profiles.
+- Make each product's name unique.
 
 
 
