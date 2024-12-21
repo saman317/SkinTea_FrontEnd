@@ -28,7 +28,7 @@ const handleSubmit = async (evt) => {
       return (
         <main>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="title-input">Spill.The.Tea</label>
+            <label htmlFor="productName">Spill.The.Tea</label>
             <input
               required
               type= 'text'
@@ -37,43 +37,46 @@ const handleSubmit = async (evt) => {
               value={formData.productName}
               onChange={handleChange}
             />
-            <label htmlFor="productType-input">ProductType</label>
+            <label htmlFor="productType">ProductType</label>
             <select
               required
               name="productType"
-              id="productType-input"
+              id="productType"
               value={formData.productType}
               onChange={handleChange}
             >
+              <option value="">Select Type</option>
               <option value="Skincare">Skincare</option>
               <option value="Makeup">Makeup</option>
               <option value="Hair">Hair</option>
               
             </select>
-            <label htmlFor="recommendation-input">Recommendation</label>
+            <label htmlFor="recommendation">Recommendation</label>
             <select
               required
               name="recommendation"
-              id="recommendation-input"
+              id="recommendation"
               value={formData.recommendation}
               onChange={handleChange}
             >
+              <option value="">Select Recommendation</option>
               <option value="Holy-Grail">Holy.Grail</option>
               <option value="Gotta-Have-It">Gotta.Have.It</option>
               <option value="Ehh">Ehh</option>
               <option value="Regift">Regift</option>
             </select>
-            <label htmlFor="pricePoint-input">Pricepoint</label>
+            <label htmlFor="pricePoint">Pricepoint</label>
             <select
               required
-              name="Pricepoint"
-              id="pricePoint-input"
+              name="pricePoint"
+              id="pricePoint"
               value={formData.pricePoint}
               onChange={handleChange}
             >
-              <option value="$">$</option>
-              <option value="$$">$$</option>
-              <option value="$$$">$$$</option>
+              <option value= "">Select Price</option>
+              <option value="$">Affordable</option>
+              <option value="$$">Luxury</option>
+              <option value="$$$">Save Up</option>
               
             </select>
             <button type="submit">SUBMIT</button>
@@ -83,4 +86,4 @@ const handleSubmit = async (evt) => {
     };
     
 
-export default SkinteaForm
+export default SkinteaForm;
