@@ -89,5 +89,25 @@ const deletedSkintea = async (id) => {
     }
   };
 
-//     
-export{ getSkintea,showSkintea,create, createComment, deletedSkintea};
+
+const updateSkintea= async(id, skinteaFormData)=>{
+    try{
+        const res = await fetch(`${BASE_URL}/${id}`, {
+            method: 'PUT',
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(skinteaFormData),
+          });
+          return res.json();
+
+    }catch(error){
+        console.log(error)
+
+
+    }
+}
+
+    
+export{ getSkintea,showSkintea,create, createComment, deletedSkintea, updateSkintea};
