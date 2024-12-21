@@ -30,7 +30,9 @@ const App = () => {
 
     };
     if(user) fetchAllSkintea()
-  }, [user])
+  }, [user]);
+
+  const addNewSkintea = (newSkintea) => setSkintea([newSkintea, ...skintea]);
   return (
     <>
       <AuthedUserContext.Provider value={user}>
@@ -43,7 +45,7 @@ const App = () => {
           )}
           
           <Route path="/skintea" element= {<SkinteaList skintea={skintea}/>} />
-          <Route path="/skintea/new" element= {<SkinteaNew/>}/>
+          <Route path="/skintea/new" element= {<SkinteaNew addNewSkintea={addNewSkintea}/>}/>
           <Route path="/skintea/:id" element= {<SkinteaDetails/>}/>
           <Route path="/signup" element={<SignupForm setUser={setUser} />} />
           <Route path="/signin" element={<SigninForm setUser={setUser} />} />

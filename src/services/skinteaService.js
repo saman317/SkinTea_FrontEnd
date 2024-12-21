@@ -34,4 +34,25 @@ const showSkintea= async (skinteaId)=>{
         console.log(err, "Malfunction")
     }
 }
-export{ getSkintea, showSkintea };
+
+const create = async(formData)=>{
+    try{
+        const res = await fetch(`${BACKEND_URL}/skintea/`, {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+  
+          });
+          const {newSkintea }= await res.json();
+          return newSkintea;
+        
+
+    }catch(err){
+        console.log(err)
+
+    }
+}
+export{ getSkintea, showSkintea, create };
