@@ -25,14 +25,16 @@ const App = () => {
 
   useEffect(() => {
     const fetchAllSkintea = async () => {
-      const {skinT}= await skinteaService.getSkintea()
-      setSkintea(skinT);
+      const {skintea}= await skinteaService.getSkintea()
+      setSkintea(skintea);
 
     };
     if(user) fetchAllSkintea()
   }, [user]);
 
-  const addNewSkintea = (newSkintea) => setSkintea([newSkintea, ...skintea]);
+  const addNewSkintea = (newSkintea) => {
+    console.log (skintea)
+    setSkintea( skintea=> [newSkintea, ...skintea])};
   return (
     <>
       <AuthedUserContext.Provider value={user}>

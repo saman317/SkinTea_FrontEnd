@@ -15,12 +15,15 @@ const handleChange = (evt) => {
         setFormData({ ...formData, [evt.target.name]: evt.target.value });
       };
     
-const handleSubmit = async (evt) => {
+      const handleSubmit = async (evt) => {
         evt.preventDefault();
         console.log("formData", formData);
         // We'll update this function shortly...
         const newSkintea = await skinteaService.create(formData);
         if (newSkintea) {
+// addad a console log here to se if here are getting back the tea
+
+console.log(newSkintea, "New tea here----------->")
           props.addNewSkintea(newSkintea);
           navigate("/skintea");
         }
@@ -60,8 +63,8 @@ const handleSubmit = async (evt) => {
               onChange={handleChange}
             >
               <option value="">Select Recommendation</option>
-              <option value="Holy-Grail">Holy.Grail</option>
-              <option value="Gotta-Have-It">Gotta.Have.It</option>
+              <option value="Holy Grail">Holy.Grail</option>
+              <option value="Gotta Have It ">Gotta.Have.It</option>
               <option value="Ehh">Ehh</option>
               <option value="Regift">Regift</option>
             </select>

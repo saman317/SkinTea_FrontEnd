@@ -46,8 +46,9 @@ const create = async(formData)=>{
             body: JSON.stringify(formData),
   
           });
-          const {newSkintea }= await res.json();
-          return newSkintea;
+          const {skintea} = await res.json();
+          console.log(skintea)
+          return skintea;
         
 
     }catch(err){
