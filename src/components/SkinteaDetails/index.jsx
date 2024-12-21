@@ -29,8 +29,6 @@ const SkinteaDetails  = (props) => {
         <p>{skintea.recommendation}</p>
         <p>{skintea.pricePoint}</p>
 
-        
-          
 
             <p>{skintea.author.username} posted on { new Date(skintea.createdAt).toLocaleDateString()}</p>
             {skintea.author._id === user._id && (
