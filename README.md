@@ -1,5 +1,6 @@
 # SkinTea
 
+<img width="900" alt="Screenshot 2024-12-21 at 4 33 49 AM" src="https://github.com/user-attachments/assets/8da130c8-4986-497b-8f11-f71406bfdcac" />
 
 **SkinTea** is a platform for skincare, makeup, and hair product enthusiasts to share their experiences. With the growing interest in skincare, this application provides a space to post real reviews, tips, and product recommendations.
 
