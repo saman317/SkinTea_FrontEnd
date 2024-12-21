@@ -44,6 +44,12 @@ const App = () => {
       navigate("/skintea");
     };
 
+
+  const handleUpdateSkintea = async (id,skinteaFormData ) =>{
+    const updatedTea= await skinteaService.update(id,skinteaFormData);
+    setSkintea(skintea.map((tea)=> (id === tea._id ? updatedTea : tea)));
+    navigate(`/skintea/${id}`)
+  }
   return (
     <>
       <AuthedUserContext.Provider value={user}>
@@ -58,6 +64,7 @@ const App = () => {
           <Route path="/skintea/:id" element={ <SkinteaDetails handleDeleteSkintea={handleDeleteSkintea}/> }/>
           <Route path="/skintea" element= {<SkinteaList skintea={skintea}/>} />
           <Route path="/skintea/new" element= {<SkinteaNew addNewSkintea={addNewSkintea}/>}/>
+          <Route path="/skintea/:id/edit" element= {<SkinteaNew handleUpdateSkintea/>}/>
           <Route path="/signup" element={<SignupForm setUser={setUser} />} />
           <Route path="/signin" element={<SigninForm setUser={setUser} />} />
         </Routes>
